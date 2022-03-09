@@ -17,6 +17,11 @@ int a = mynames::sum(5, 12);
 >>  получить из входного потока
 <<  поместить в выходной поток
 
+Оператор :: называется оператором области видимости (scope resolution operator 
+Например, синтаксис Human:: DateOfBirth относится к переменной
+DateOfBirth, объявленной в пределах класса Human. Синтаксис :: DateOfBirth, напротив, относится к
+другой переменной DateOfBirth, объявленной в глобальной области видимости.)
+
 Ссылки:
 
 https://skillbox.ru/media/code/izuchaem_c_chast_8_biblioteki_i_prostranstva_imyen/

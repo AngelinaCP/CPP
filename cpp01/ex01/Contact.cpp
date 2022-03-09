@@ -1,6 +1,4 @@
 #include "Contact.hpp"
-#include "PhoneBook.hpp"
-#include <iostream>
 
 Contact::Contact() {}
 Contact::~Contact() {}
@@ -16,6 +14,14 @@ void    Contact::check_print_str(std::string str) {
     else {
         std::cout << str.substr(0, 9) << ".";
     }
+}
+
+void    Contact::findContact(Contact contact) {
+    std::cout << "First name: " << contact.first_name << std::endl;
+    std::cout << "Last name: " << contact.last_name << std::endl;
+    std::cout << "Number: " << contact.number << std::endl;
+    std::cout << "Nickname: " << contact.nickname << std::endl;
+    std::cout << "Darkest secret: " << contact.secret << std::endl;
 }
 
 void    Contact::printPhoneBook(int index) {
@@ -44,14 +50,11 @@ void Contact::seeCap() {
 }
 
 void Contact:: setInfo(int index) {
-//    Contact();
 
     this->index += 1;
     first_name = getInfo("Enter the first name: ");
     last_name = getInfo("Enter the last name: ");
     nickname = getInfo("Enter the nickname: ");
+    number = getInfo("Enter the phone number: ");
     secret = getInfo("Enter your darkest secret: ");
-
-//    std::cout << "Index " << index << std::endl;
-    //	std::cin >> this->first_name;
 }

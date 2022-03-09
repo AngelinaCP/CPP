@@ -10,12 +10,12 @@ class PhoneBook
 public:
     PhoneBook();
     ~PhoneBook();
-	Contact contacts[8];
-	int utter_index;
-    int count;
 
-	void Add(void);
-    void Search(void);
+	Contact contacts[8];
+	int     utter_index;
+    int     count;
+	void    Add(void);
+    void    Search(void);
 };
 
 #endif
