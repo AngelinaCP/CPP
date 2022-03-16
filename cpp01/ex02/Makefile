@@ -1,11 +1,11 @@
-SRCS			= tests.cpp Account.cpp
+SRCS			= main.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
 CPP				= c++
 RM				= rm -f
 FLAGS		= -Wall -Wextra -Werror
 
-NAME			= account
+NAME			= brain
 
 all:			$(NAME)
 

@@ -1,11 +1,11 @@
-SRCS			= Zombie.cpp main.cpp newZombie.cpp randomChump.cpp
+SRCS			= Contact.cpp PhoneBook.cpp Main.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
 CPP				= c++
 RM				= rm -f
 FLAGS		= -Wall -Wextra -Werror
 
-NAME			= zombie
+NAME			= phonebook
 
 all:			$(NAME)
 

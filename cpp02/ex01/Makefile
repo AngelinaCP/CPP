@@ -1,16 +1,17 @@
-SRCS			= Zombie.cpp main.cpp zombieHorde.cpp
+SRCS			= main.cpp Fixed.cpp
+
 OBJS			= $(SRCS:.cpp=.o)
 
-CPP				= c++
+CXX				= c++
 RM				= rm -f
-FLAGS		= -Wall -Wextra -Werror
+CXXFLAGS		= -Wall -Wextra -Werror
 
-NAME			= zombie
+NAME			= fixed
 
 all:			$(NAME)
 
 $(NAME):		$(OBJS)
-				$(CPP) $(FLAGS) -o $(NAME) $(OBJS)
+				$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
 clean:
 				$(RM) $(OBJS)

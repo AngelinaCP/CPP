@@ -1,17 +1,16 @@
-SRCS			= main.cpp Fixed.cpp
-
+SRCS			= tests.cpp Account.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
-CXX				= c++
+CPP				= c++
 RM				= rm -f
-CXXFLAGS		= -Wall -Wextra -Werror
+FLAGS		= -Wall -Wextra -Werror
 
-NAME			= karen
+NAME			= account
 
 all:			$(NAME)
 
 $(NAME):		$(OBJS)
-				$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
+				$(CPP) $(FLAGS) -o $(NAME) $(OBJS)
 
 clean:
 				$(RM) $(OBJS)
@@ -21,4 +20,4 @@ fclean:			clean
 
 re:				fclean $(NAME)
 
-.PHONY:			all clean fclean r
+.PHONY:			all clean fclean re

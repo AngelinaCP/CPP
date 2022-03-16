@@ -1,16 +1,16 @@
-#include <iostream>
+#include "Fixed.hpp"
 
 int main(void) {
+    Fixed			a;
+    Fixed const		b(Fixed(5.05f) * Fixed(2));
 
-    std::string str = "HI THIS IS BRAIN";
+    std::cout	<<	a	<< std::endl;
+    std::cout	<<	++a	<< std::endl;
+    std::cout	<<	a	<< std::endl;
+    std::cout	<<	a++	<< std::endl;
+    std::cout	<<	a	<< std::endl;
 
-    std::string *ptr = &str;
-    std::string &ref = str;
-    std::cout << "this is the address of a string: " << &str << std::endl;
-    std::cout << "this is the address held by ptr: " << ptr << std::endl;
-    std::cout << "this is the address held by ref: " << &ref << std::endl;
-
-    std::cout << "this is the value of the string var: " << str << std::endl;
-    std::cout << "this is the value pointed to by ptr: " << *ptr << std::endl;
-    std::cout << "this is the value pointed to by ref: " << ref << std::endl;
+    std::cout	<<	b	<< std::endl;
+    std::cout	<<	Fixed::max(a, b) << std::endl;
+    return 0;
 }
