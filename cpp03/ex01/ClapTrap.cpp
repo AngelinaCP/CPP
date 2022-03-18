@@ -35,7 +35,7 @@ void    ClapTrap::takeDamage(unsigned int amount) {
 	} else {
 		hit_points -= amount;
 		if (hit_points <= 0) {
-			std::cout << name << " has just died :((" << std::endl;
+			std::cout << name << " has just died :(" << std::endl;
 		} else {
 			std::cout	<< name << " has " << hit_points 
 						<< " hit points left" << std::endl; 
@@ -47,13 +47,13 @@ void    ClapTrap::beRepaired(unsigned int amount) {
 	
 	if (hit_points <= 0) {
 		std::cout	<< "Unfortunately, " << name 
-					<< " is already dead :(" << std::endl; 
+					<< " is already dead!" << std::endl;
 	} else {
 		if (energy_points > 0) {
 	    this->hit_points += amount;
 	    this->energy_points--;
 		std::cout	<< "ClapTrap " << this->name 
-			<< " has " << hit_points << "left :)" << std::endl;
+			<< " has " << hit_points << " hit points left :)" << std::endl;
 		} else {
 			std::cout << "Not enough energy points" << std::endl;
 		}

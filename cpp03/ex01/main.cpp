@@ -3,7 +3,7 @@
 
 int main(void) {
 	std::cout  << std::endl;
-    std::cout << "\033[45mClapTrap\033[0m" << std::endl;
+    std::cout << "\033[45mClapTrap\033[0m" << std::endl;
 	std::cout  << std::endl;
     ClapTrap	Michael("Michael");
 
@@ -16,7 +16,7 @@ int main(void) {
     Andrew.takeDamage(20);
     Andrew.beRepaired(25);
   	std::cout  << std::endl;
-    std::cout << "\033[45mScavTrap\033[0m" << std::endl;
+    std::cout << "\033[45mScavTrap\033[0m" << std::endl;
 	std::cout  << std::endl;
     ScavTrap	Alex("Alex");
 
@@ -24,5 +24,4 @@ int main(void) {
     Alex.takeDamage(18);
     Alex.beRepaired(40);
     Alex.guardGate();
-    return (0);
 }
