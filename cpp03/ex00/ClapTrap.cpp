@@ -8,6 +8,7 @@ ClapTrap::ClapTrap(std::string name) {
 	this->hit_points = 10;
 	this->attack_damage = 0;
 }
+
 ClapTrap::~ClapTrap() {
 	std::cout << "Calling destructor..." << std::endl;
 }

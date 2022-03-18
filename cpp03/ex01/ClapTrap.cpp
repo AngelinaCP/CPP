@@ -1,15 +1,20 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(std::string name) {
-
-	std::cout << "Calling " << name << " object constructor" << std::endl;
-    this->name = name;
-	this->energy_points = 10;
-	this->hit_points = 10;
-	this->attack_damage = 0;
+ClapTrap::ClapTrap(const std::string name) : name(name), hit_points(10), energy_points(10), attack_damage(0) {
+    std::cout   << "ClapTrap " << name << " object constructor called" << std::endl;
 }
+
+ClapTrap::ClapTrap() : name("Feydor"), hit_points(10), energy_points(10), attack_damage(0) {};
+
+ClapTrap::ClapTrap(const std::string name_s, int hit_points_s, int energy_points_s, int attack_damage_s) {
+	this->name = name_s;
+	this->hit_points = hit_points_s;
+	this->energy_points = energy_points_s;
+	this->attack_damage = attack_damage_s;
+}
+
 ClapTrap::~ClapTrap() {
-	std::cout << "Calling destructor..." << std::endl;
+	    std::cout   << "ClapTrap " << name << " object destructor called" << std::endl;
 }
 
 void    ClapTrap::attack(const std::string& target) {
@@ -65,7 +70,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &type) {
 	return *this;
 }
 
-ClapTrap::ClapTrap(ClapTrap	&type) {
+ClapTrap::ClapTrap(const ClapTrap	&type) {
 	this->name = type.name;
 	this->energy_points = type.energy_points;
 	this->hit_points = type.hit_points;
